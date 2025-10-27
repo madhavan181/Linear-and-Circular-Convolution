@@ -1,12 +1,10 @@
-AIM:
+##AIM:
 To perform Linear and Circular Convolution for two given sequence using SCILAB.
 
-APPARATUS REQUIRED:
+##APPARATUS REQUIRED:
 PC installed with SCILAB.
 
-PROGRAM (Linear Convolution):
-// Linear Convolution
-
+##PROGRAM (Linear Convolution):
  clc;  
 clear; 
 x = [1 1 2 1]; 
@@ -49,59 +47,12 @@ disp(y,'Convolution Sum using Direct Formula Method = ')
 subplot(3,1,3); 
 plot2d3(y)  
 title('Graphical Representation of output Signal y'); 
-PROGRAM (Circular Convolution):
-// Circular Convolution
 
-clc;
-clear;
-
-// Input sequences
-x = [1 2 2 1];
-h = [1 2 3 1];
-
-// Length for circular convolution (take max length)
-N = max(length(x), length(h));
-
-// Zero padding if needed
-x = [x, zeros(1, N-length(x))];
-h = [h, zeros(1, N-length(h))];
-
-disp("Zero-padded input:");
-disp(x);
-disp("Zero-padded impulse:");
-disp(h);
-
-// ---- Circular convolution using modulo ----
-y = zeros(1, N);
-
-for n = 1:N
-    for k = 1:N
-        j = pmodulo(n-k, N) + 1;   // pmodulo avoids negative indices
-        y(n) = y(n) + x(k) * h(j);
-    end
-end
-
-disp("Circular convolution result:");
-disp(y);
-
-// ---- Plot results ----
-subplot(3,1,1);
-plot2d3(0:N-1, x);
-title("Input sequence x[n]");
-xlabel("n"); ylabel("Amplitude");
-
-subplot(3,1,2);
-plot2d3(0:N-1, h);
-title("Impulse response h[n]");
-xlabel("n"); ylabel("Amplitude");
-
-subplot(3,1,3);
-plot2d3(0:N-1, y);
-title("Circular Convolution y[n]");
-xlabel("n"); ylabel("Amplitude");
-OUTPUT (Linear Convolution):
+##OUTPUT (Linear Convolution):
 <img width="933" height="559" alt="image" src="https://github.com/user-attachments/assets/92ab4850-1843-4588-882c-1ad16944c462" />
-OUTPUT (Circular Convolution):
+
+##OUTPUT (Circular Convolution):
 <img width="938" height="555" alt="image" src="https://github.com/user-attachments/assets/48bf6b6d-393a-417f-9d5f-1c1a0e06a7c1" />
-RESULT:
+
+##RESULT:
 Linear and Circular Convolution are successfully executed in scilab
