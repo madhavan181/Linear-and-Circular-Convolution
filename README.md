@@ -1,13 +1,13 @@
-##AIM:
+AIM:
 
 To perform Linear and Circular Convolution for two given sequence using SCILAB.
 
-##APPARATUS REQUIRED:
+APPARATUS REQUIRED:
 
 PC installed with SCILAB.
 
-##PROGRAM (Linear Convolution):
-
+PROGRAM (Linear Convolution):
+```
  clc;  
 clear; 
 x = [1 1 2 1]; 
@@ -50,8 +50,8 @@ disp(y,'Convolution Sum using Direct Formula Method = ')
 subplot(3,1,3); 
 plot2d3(y)  
 title('Graphical Representation of output Signal y'); 
-
-##OUTPUT (Linear Convolution):
+```
+OUTPUT (Linear Convolution):
 
 <img width="933" height="559" alt="image" src="https://github.com/user-attachments/assets/92ab4850-1843-4588-882c-1ad16944c462" />
 
@@ -59,6 +59,6 @@ title('Graphical Representation of output Signal y');
 
 <img width="938" height="555" alt="image" src="https://github.com/user-attachments/assets/48bf6b6d-393a-417f-9d5f-1c1a0e06a7c1" />
 
-##RESULT:
+RESULT:
 
 Linear and Circular Convolution are successfully executed in scilab
